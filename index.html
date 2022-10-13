@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <main class="container">
+        <div class="header-box">
+            <span>&larr;</span>
+            <h3>Weather App</h3>
+        </div>
+        <div class="search-box">
+            <div class="msg-box error">Invalid city name</div>
+            <div class="input-box">
+                <input type="text" name="city name" id="city-name" placeholder="Please Enter a valid city">
+                <button class="btn">Search</button>
+            </div>
+            <div class="line-separator"></div>
+            <div class="current-location-btn">
+                <button class="cur-weather btn">Get Current Location Weather</button>
+            </div>
+        </div>
+        <div class="weather-info search-info">
+            <div class="user-location">
+                <span>Weather in <i class="fa-thin fa-location-dot map-icon">X</i></span>
+                <span class="city-country-name">Raichur,India</span>
+            </div>
+            <div class="weather-details">
+                <div class="temp">
+                    <span class="temp-num">38</span>
+                    °C
+                </div>
+                <div class="weather-data">
+                    <div class="weather-img">
+                        <img src="./Weather Icons/cloud.svg" alt="Weather-icon" id="weather-icon">
+                    </div>
+                    <span class="weather-cond">Broken Clouds</span>
+                </div>
+            </div>
+            <div class="other-weather-info">
+                <div class="feels-like-data child">
+                    <span>Feels-like - </span>
+                    <span class="humid-num num">18</span>°
+                </div>
+                <div class="humid-data child">
+                    <span>Humidity - </span>
+                    <span class="humid-num num">95</span>%
+                </div>
+                <div class="wind-data child">
+                    <span>Wind Speed - </span>
+                    <span class="humid-num num"><span class="temp-num">38</span>
+                        <span class="temp-celsius">km/h</span>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <!-- Current location data -->
+        <div class="current-location-weather">
+            <div class="cur-today-weather">
+                <div class="cur-left-area">
+                    <div class="cur-day">
+                        <h3 class="day">Thursday</h3>
+                        <span class="date">13 oct 2022</span>
+                    </div>
+                    <div class="cur-location">
+                        <i class="fa-thin fa-location-dot map-icon">X</i>
+                        <span class="city-country-name">Raichur,India</span>
+                    </div>
+                    <div class="weather-img">
+                        <img src="./Weather Icons/haze.svg" alt="Weather-icon" id="weather-icon" class="cur-img">
+                    </div>
+                    <div class="cur-temp">
+                        <span class="cur-temp-num">38</span>
+                        °C
+                    </div>
+                    <span class="cur-weather-cond">Broken Clouds</span>
+                </div>
+                <div class="other-weather-info ">
+                    <div class="feels-like-data cur-child">
+                        <span>Feels-like - </span>
+                        <span class="humid-num num">18</span>°
+                    </div>
+                    <div class="humid-data cur-child">
+                        <span>Humidity - </span>
+                        <span class="humid-num num">95</span>%
+                    </div>
+                    <div class="wind-data cur-child">
+                        <span>Wind Speed - </span>
+                        <span class="wind-speed-num num">38</span>km/h
+                    </div>
+                    <!-- <div class="cur-location-btn">
+                        <button class="cur-weather-btn btn">Go Back to home</button>
+                    </div> -->
+                </div>
+            </div>
+            <div class="upcoming-days">
+                <div class="days" id="day-1">
+                    <h3>Monday</h3>
+                    <div class="day-temp">
+                        Day - 
+                        <span class="temp-num-day-1">38</span>
+                        °C
+                    </div>
+                    <div class="night-temp">
+                        Night - 
+                        <span class="temp-num-night-1">32</span>
+                        °C
+                    </div>
+                </div>
+                <div class="days" id="day-2">
+                    <h3>Tuesday</h3>
+                    <div class="day-temp">
+                        Day - 
+                        <span class="temp-num-day-2">38</span>
+                        °C
+                    </div>
+                    <div class="night-temp">
+                        Night - 
+                        <span class="temp-num-night-2">32</span>
+                        °C
+                    </div>
+                </div>
+                <div class="days" id="day-3">
+                    <h3>Wednesday</h3>
+                    <div class="day-temp">
+                        Day - 
+                        <span class="temp-num-day-3">38</span>
+                        °C
+                    </div>
+                    <div class="night-temp">
+                        Night - 
+                        <span class="temp-num-night-3">32</span>
+                        °C
+                    </div>
+                </div>
+                <div class="days" id="day-4">
+                    <h3>Thursday</h3>
+                    <div class="day-temp">
+                        Day - 
+                        <span class="temp-num-day-4">38</span>
+                        °C
+                    </div>
+                    <div class="night-temp">
+                        Night - 
+                        <span class="temp-num-night-4">32</span>
+                        °C
+                    </div>
+                </div>
+                <div class="days" id="day-5">
+                    <h3>Friday</h3>
+                    <div class="day-temp">
+                        Day - 
+                        <span class="temp-num-day-5">38</span>
+                        °C
+                    </div>
+                    <div class="night-temp">
+                        Night - 
+                        <span class="temp-num-night-5">32</span>
+                        °C
+                    </div>
+                </div>
+                <div class="days" id="day-6">
+                    <h3>Saturday</h3>
+                    <div class="day-temp">
+                        Day - 
+                        <span class="temp-num-day-6">38</span>
+                        °C
+                    </div>
+                    <div class="night-temp">
+                        Night - 
+                        <span class="temp-num-night-6">32</span>
+                        °C
+                    </div>
+                </div>
+                <div class="days" id="day-7">
+                    <h3>Sunday</h3>
+                    <div class="day-temp">
+                        Day - 
+                        <span class="temp-num-day-7">38</span>
+                        °C
+                    </div>
+                    <div class="night-temp">
+                        Night - 
+                        <span class="temp-num-night-7">32</span>
+                        °C
+                    </div>
+                </div>
+            </div>
+         </div>
+        </div>
+    </main>
+    <script src="index.js"></script>
+</body>
+
+</html>
