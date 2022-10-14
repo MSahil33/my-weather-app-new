@@ -10,49 +10,47 @@
 body{
     background-color: var(--primary-color);
     display:flex;
-    justify-content:center;
     align-items:center;
-    /* min-height: 100vh; */
-    margin-top: 120px;
+    flex-direction: column;
+    margin-top: 50px;
     font-family:  'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 .container{
-    background-color: whitesmoke;
+    background-color: white;
     border-radius: 8px;
-    width: 350px;
+    width: 320px;
+    margin: 12px 0;
 }
 
-/* Header box common for all containers */
-.header-box{
-    border-bottom: 1px solid var(--secondary-color);
-    font-size: 18px;
-    padding: 16px 25px;
-    text-transform: uppercase;
-    font-weight: bold;
-    color: var(--primary-color);
+/* Header box with title*/
 
-}
-.header-box h3{
-    display:inline-block;
-    margin-left: 4px;
-}
-.header-box span{
-    cursor: pointer;
-    padding-left: 0;
+.head{
+    font-size: 25px;
+    color: whitesmoke;
+    font-weight: normal;
+    margin: 12px;
 }
 
 /* Search box  */
 .search-box{
     padding: 20px;
-    display: none;
+    background-color: white;
+    border-radius: 8px;
+
 }
 .msg-box{
+    display: none;
     padding: 8px 12px;
     text-align: center;
     font-size: 16px;
     border-radius: 6px;
     text-transform: capitalize;
     margin: 4px 0;
+}
+
+/* Active class */
+.active{
+    display: block;
 }
 
 /* Error message */
@@ -68,8 +66,9 @@ body{
     background-color: #d1ecf1;
     border: 1.5px solid #bee5eb;
 }
+
 .input-box{
-    padding-top: 12px;
+    padding-top: 10px;
 }
 .input-box input{
     width: 100%;
@@ -105,86 +104,36 @@ body{
 }
 .line-separator::before{
     content: 'OR';
+    font-weight: 550;
     padding: 0 10px ;
-    background-color: whitesmoke;
+    background-color: white;
 }
 
 /* searched city weather section  */
-.weather-info{
-    padding: 8px;
-    display: none;
-}
-.user-location{
-    font-size: 18px;
-    padding: 5px 12px;
-}
-.city-country-name,.map-icon{
-    font-weight: bold;
-    color: var(--primary-color);
-    cursor: pointer;
-}
-.weather-details{
-    display:flex;
-    justify-content: space-between;
-    padding: 10px 0;
-    border-bottom: 0.3px solid var(--primary-color);
-}
-.temp{
-    font-weight: bold;
-    font-size: 1.5rem;
-    padding: 10px 0px 15px 15px;
-}
-.temp .temp-num{
-    font-weight: bold;
-    font-size: 4rem;
-    font-weight: normal;
-    padding: 0;
-}
-
-.weather-data{
-    padding: 8px 15px 15px 0px;
-    text-align: center;
-}
-.weather-data .weather-cond{
-    padding: 0;
-    font-weight: bold;
-}
-img{
-    width: 75px;
-    height: 100%;
-}
-
-/* other-weather-info (humidity,feels-like,wind speed)*/
-
-.other-weather-info{
-    margin: 12px 0;
-}
-.other-weather-info .child{
-    border-bottom: 0.3px solid var(--primary-color);
-    padding: 12px;
-    cursor: pointer;
-    font-size: 16px;
-    font-weight: 550;
-}
-.other-weather-info .child:hover{
-    background-color: #47b5ff36;
-}
-
-/* Current location weather data */
 
 .current-location-weather{
     padding: 12px;
-    /* display: none; */
+    display: none;
+}
+.weather-active{
+    display: block;
 }
 .cur-today-weather{
     display: flex;
     justify-content: space-between;
 }
 .cur-left-area{
-    width: 50%;
+    width: 100%;
     padding: 12px;
     background-color: #47b5ff3a;
     border-radius: 6px;
+    position: relative;
+}
+.other-weather-info{
+    font-size: 15px;
+    font-weight: 550;
+    position: absolute;
+    bottom: 12px;
 }
 .cur-day .day{
     font-size: 25px;
@@ -198,44 +147,18 @@ img{
 }
 .weather-img .cur-img{
     margin-top: 30px;
-    width: 50px;
+    width: 70px;
+}
+.cur-temp{
+    font-weight: bold;
 }
 .cur-temp span{
-    font-size: 25px;
+    font-size: 40px;
+    padding: 0px;
 }
 .cur-weather-cond{
     font-weight: 550;
 }
-
-/* Current location other weather weather-info */
-.cur-child{
-    padding: 3px 15px;
-    font-weight: 550;
-}
-.cur-child span{
-    font-size: 17px;
-}
-.cur-child .num{
-    font-size: 15px;
-}
-.cur-weather-btn{
-    font-size: 14px;
-    width: 130px;
-    font-weight: 550;
-    margin: 40px auto 0px;
-}
-/*upcoming-days data*/
-.upcoming-days{
-    display: flex;
-    max-width: 320px;
-    overflow: scroll;
-    margin: 12px 0;
-    padding: 4px;
-}
-.days{
-    min-width: 120px;
-    padding: 15px;
-    background-color: #bee5ebb5;
-    margin: 0px 2px;
-    border-radius: 8px;
+.cur-temp-right{
+    float: right;
 }
