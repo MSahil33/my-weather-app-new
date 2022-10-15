@@ -129,6 +129,10 @@ body{
     border-radius: 6px;
     position: relative;
 }
+.location-img{
+    width: 12px;
+    color:#0c5460;
+}
 .other-weather-info{
     font-size: 15px;
     font-weight: 550;
@@ -142,7 +146,7 @@ body{
     font-size: 15px;
     font-weight: bold;
 }
-.cur-location span,.cur-location .map-icon{
+.cur-location span{
     color:#0c5460;
 }
 .weather-img .cur-img{

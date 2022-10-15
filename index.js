@@ -11,7 +11,7 @@ const fetchDataByCity = async (cityName)=>{
 
     let response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=metric&appid=${apikey}`);
     let data = await response.json();
-    // console.log(data)
+    console.log(data)
     getweatherData(data);
 }
 
@@ -20,7 +20,7 @@ const fetchDataByCity = async (cityName)=>{
 const fetchDataByCoords = async (lat,lon) =>{
     let response = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${apikey}`);
     let data = await response.json();
-    // console.log(data)
+    console.log(data)
     getweatherData(data);
 
 }
@@ -61,10 +61,12 @@ const getweatherData = (data)=>{
 
         const cur_location = document.querySelector('.cur-location');
         let city = data.name;
-        let country = data.sys.country;
+        let country_code = data.sys.country;
+        let regionNames = new Intl.DisplayNames(['en'],{type:'region'})
+        let country_name = regionNames.of(country_code); 
         cur_location.innerHTML=`
-            <i class="fa-thin fa-location-dot map-icon">Ï</i>
-            <span class="city-country-name">${city},${country}</span>
+            <img src="./Weather Icons/location-pin.svg"/ class="location-img">
+            <span class="city-country-name">${city},${country_name}</span>
         `
 
         const other_weather_info = document.querySelector('.other-weather-info');
