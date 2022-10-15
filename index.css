@@ -114,7 +114,9 @@ body{
 .current-location-weather{
     padding: 12px;
     display: none;
+    margin-bottom:35px;
 }
+
 .weather-active{
     display: block;
 }
@@ -147,7 +149,7 @@ body{
     font-weight: bold;
 }
 .cur-location span{
-    color:#0c5460;
+    color:#0a3239;
 }
 .weather-img .cur-img{
     margin-top: 30px;
