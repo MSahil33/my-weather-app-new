@@ -9,7 +9,7 @@
 
 
 #### Click below to see the demo
-**[Live Preview](https://my-weather-app-new.netlify.app/ _blank  "Preview on Netlify")**
+**[Live Preview](https://my-weather-app-new.netlify.app/  "Preview on Netlify")**
 
 ##### I have hosted this weather app on **Netlify** 
 ##### I have created this weather app using openweatherapp.org API 
